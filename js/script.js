@@ -5,8 +5,10 @@ function nuevoParrafo() {
 }
 
 function nuevoTitulo() {
+  var contenido = document.getElementById("contenido");
   var texto = document.getElementById("titulo");
   texto.innerHTML = "<h1> Nuevo titulo </h1>";
+  contenido.innerHTML = contenido.innerHTML + "<h1>" + texto + "</h1>";
 }
 
 document.getElementById("imagen").onchange = function (evt) {
@@ -50,5 +52,11 @@ function crearEnlace(href, texto) {
     return;
   }
 
-  contenido.innerHTML = contenido.innerHTML + "<a target='_blank' href='" + href + "'>" + texto + "</a>";
+  contenido.innerHTML =
+    contenido.innerHTML +
+    "<a target='_blank' href='" +
+    href +
+    "'>" +
+    texto +
+    "</a>";
 }
