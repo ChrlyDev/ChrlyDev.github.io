@@ -6,9 +6,10 @@ function nuevoParrafo() {
 
 function nuevoTitulo() {
   var contenido = document.getElementById("contenido");
-  var texto = document.getElementById("titulo");
-  texto.innerHTML = "<h1> Nuevo titulo </h1>";
+  var texto = document.getElementById("texto").value;
+  var titulo = document.getElementById("titulo");
   contenido.innerHTML = contenido.innerHTML + "<h1>" + texto + "</h1>";
+  titulo.innerHTML = "<h1>" + texto + "</h1>";
 }
 
 document.getElementById("imagen").onchange = function (evt) {
